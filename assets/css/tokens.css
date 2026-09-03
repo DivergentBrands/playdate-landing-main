@@ -1,0 +1,39 @@
+/* Playdate — brand design tokens (from playdate-brand-guidelines.md §7) */
+:root {
+  /* Core */
+  --bg-blue:        #B9DDF2;  /* background / sky field */
+  --cloud-white:    #F9F7F2;  /* clouds, waves, cards, label field */
+  --ink:            #08397C;  /* wordmark, headlines, body */
+  --ink-secondary:  #114F8F;  /* descriptors, subheads */
+  --ink-accent:     #064D8D;  /* ingredients, fine print */
+
+  /* Category accents — the "baby · kids · toddlers" line */
+  --baby:      #24A8DA;
+  --kids:      #F6CF69;
+  --toddlers:  #DF6334;
+
+  /* Type families */
+  --font-display:    'Quicksand', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-utility:    'Montserrat', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-supporting: 'Lora', Georgia, 'Times New Roman', serif;
+
+  /* Shape */
+  --radius-card: 22px;
+  --radius-pill: 100px;
+
+  /* Spacing scale */
+  --space-2xs: .5rem;
+  --space-xs:  .75rem;
+  --space-sm:  1rem;
+  --space-md:  1.5rem;
+  --space-lg:  2.5rem;
+  --space-xl:  4rem;
+  --space-2xl: 6rem;
+
+  /* Layout */
+  --maxw: 1120px;
+  --maxw-narrow: 760px;
+
+  /* Soft elevation (used sparingly) */
+  --shadow-soft: 0 18px 40px -24px rgba(8, 57, 124, .35);
+}
