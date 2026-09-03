@@ -356,9 +356,8 @@ strong { font-weight: 700; }
 /* Ingredient section — centered, no image */
 #ingredients { text-align: center; }
 #ingredients #ing-title {
-  font-size: clamp(2.1rem, 4.6vw, 2.9rem);
+  font-size: clamp(1.9rem, 3.4vw, 2.5rem);
   line-height: 1.12;
-  max-width: 22ch;
   margin: 0 auto 1.9rem;
 }
 #ingredients .ingredients__lead {
@@ -368,26 +367,23 @@ strong { font-weight: 700; }
   font-size: clamp(1.1rem, 1.4vw, 1.25rem);
   line-height: 1.55;
 }
-#ingredients .ingredients {
-  margin: 2.75rem auto 0;
-  max-width: 920px;
-}
+#ingredients .ingredients { margin-top: 2.75rem; }
 #ingredients .ingredient { text-align: center; }
 #ingredients .ingredient__mark { margin-left: auto; margin-right: auto; }
 
 /* Blue → cream wave transition (matches the bottle label) */
-.hocl { position: relative; padding-top: calc(clamp(3rem, 8vw, 5.5rem) + clamp(38px, 5vw, 68px)); }
+.hocl { position: relative; padding-top: calc(clamp(3rem, 8vw, 5.5rem) + clamp(16px, 2vw, 28px)); }
 .section-wave {
   position: absolute; top: -1px; left: 0; right: 0;
-  width: 100%; height: clamp(38px, 5vw, 68px);
+  width: 100%; height: clamp(32px, 4vw, 52px);
   display: block;
 }
 
-/* HOCl education section — larger transparent diagram, soft shadow */
+/* HOCl education section — transparent diagram, soft shadow */
 .hocl #hocl-title {
-  font-size: clamp(1.85rem, 3.6vw, 2.5rem);
-  line-height: 1.14;
-  margin-bottom: 2.2rem;
+  font-size: clamp(2.1rem, 4.6vw, 2.9rem);
+  line-height: 1.12;
+  margin-bottom: 1.9rem;
 }
 .hocl .split__body p { font-size: clamp(1.1rem, 1.4vw, 1.25rem); line-height: 1.55; }
 .hocl .split__media img {
@@ -395,17 +391,12 @@ strong { font-weight: 700; }
   border-radius: 0;
   background: transparent;
   width: 100%;
-  max-width: 760px;
+  max-width: 500px;
   margin-inline: auto;
   filter: drop-shadow(0 16px 34px rgba(8, 57, 124, .22));
 }
-@media (min-width: 820px) {
-  .hocl .split { gap: 2rem; }
-  .hocl .split__media { width: 60%; }
-  .hocl .split__body { width: 40%; }
-}
 .hocl__banner {
-  margin-top: clamp(2.75rem, 5vw, 4rem);
+  margin-top: clamp(2rem, 4vw, 3rem);
   padding-top: clamp(1.5rem, 3vw, 2rem);
   border-top: 1px solid color-mix(in srgb, var(--ink) 14%, transparent);
   text-align: center;
