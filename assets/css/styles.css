@@ -336,42 +336,82 @@ strong { font-weight: 700; }
 .ingredient {
   background: var(--cloud-white);
   border-radius: var(--radius-card);
-  padding: 1.5rem;
+  padding: 1.15rem 1.15rem 1.3rem;
   box-shadow: var(--shadow-soft);
 }
-.ingredient h3 { margin-bottom: .4rem; }
-.ingredient p { font-size: .95rem; color: var(--ink-secondary); }
+.ingredient h3 { margin-bottom: .3rem; }
+.ingredient p { font-size: .95rem; color: var(--ink-secondary); line-height: 1.4; }
 .ingredient__mark {
-  width: 48px; height: 48px; border-radius: 50%;
+  width: 62px; height: 62px; border-radius: 50%;
   display: grid; place-content: center;
-  font-family: var(--font-utility); font-weight: 700; font-size: .8rem;
+  font-family: var(--font-utility); font-weight: 700; font-size: .92rem;
   line-height: 1; white-space: nowrap;
   color: var(--cloud-white);
-  margin-bottom: .9rem;
+  margin-bottom: .8rem;
 }
 .ingredient:nth-child(1) .ingredient__mark { background: var(--baby); }
 .ingredient:nth-child(2) .ingredient__mark { background: var(--toddlers); }
 .ingredient:nth-child(3) .ingredient__mark { background: var(--ink-secondary); }
 
 /* Ingredient section — centered, no image */
-#ingredients { text-align: center; }
-#ingredients #ing-title { margin-bottom: 1rem; }
+#ingredients { text-align: center; position: relative; overflow: hidden; padding-bottom: calc(clamp(3rem, 8vw, 5.5rem) + 2.5rem); }
+#ingredients #ing-title {
+  font-size: clamp(2.1rem, 4.6vw, 2.9rem);
+  line-height: 1.12;
+  max-width: 22ch;
+  margin: 0 auto 1.9rem;
+}
 #ingredients .ingredients__lead {
   max-width: 52ch;
   margin: 0 auto;
   color: var(--ink-secondary);
+  font-size: clamp(1.1rem, 1.4vw, 1.25rem);
+  line-height: 1.55;
 }
-#ingredients .ingredients { margin-top: 2.5rem; }
+#ingredients .ingredients {
+  margin: 2.75rem auto 0;
+  max-width: 920px;
+}
 #ingredients .ingredient { text-align: center; }
 #ingredients .ingredient__mark { margin-left: auto; margin-right: auto; }
 
-/* HOCl education section — transparent diagram, no card treatment */
+/* Blue → cream wave transition (matches the bottle label) */
+.section-wave {
+  position: absolute; left: 0; right: 0; bottom: -1px;
+  width: 100%; height: clamp(42px, 6vw, 84px);
+  display: block;
+}
+
+/* HOCl education section — larger transparent diagram, soft shadow */
+.hocl #hocl-title {
+  font-size: clamp(1.85rem, 3.6vw, 2.5rem);
+  line-height: 1.14;
+  margin-bottom: 1.9rem;
+}
+.hocl .split__body p { font-size: clamp(1.1rem, 1.4vw, 1.25rem); line-height: 1.55; }
 .hocl .split__media img {
   box-shadow: none;
   border-radius: 0;
   background: transparent;
-  max-width: 460px;
+  width: 100%;
+  max-width: 760px;
   margin-inline: auto;
+  filter: drop-shadow(0 16px 34px rgba(8, 57, 124, .22));
+}
+@media (min-width: 820px) {
+  .hocl .split { gap: 2rem; }
+  .hocl .split__media { width: 60%; }
+  .hocl .split__body { width: 40%; }
+}
+.hocl__banner {
+  margin-top: clamp(2rem, 4vw, 3rem);
+  text-align: center;
+  font-family: var(--font-utility);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-size: .8rem;
+  color: var(--ink-secondary);
 }
 
 /* HOCl education stat ----------------------------------- */
