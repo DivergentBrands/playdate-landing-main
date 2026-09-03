@@ -172,6 +172,7 @@ strong { font-weight: 700; }
 /* Hero ---------------------------------------------------------- */
 .hero { background: var(--bg-blue); overflow: hidden; }
 .hero .eyebrow { display: block; margin-bottom: 1.35rem; }
+.hero #hero-title { margin-bottom: 1.35rem; }
 .hero .hl-a {
   display: block;
   font-family: var(--font-display);
