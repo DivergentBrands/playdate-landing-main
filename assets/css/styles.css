@@ -274,8 +274,6 @@ strong { font-weight: 700; }
 /* Pull quote (customer voice) ---------------------------- */
 .pull-quote {
   margin: 1.6rem 0;
-  padding-left: 1.25rem;
-  border-left: 3px solid var(--kids);
   font-family: var(--font-supporting);
   font-style: italic;
   font-weight: 400;
@@ -284,8 +282,23 @@ strong { font-weight: 700; }
   color: var(--ink);
 }
 
-/* Square media (1:1) ------------------------------------ */
+/* "The everyday moment" (section 4) — type scale + rhythm */
 .everyday .split__media img { aspect-ratio: 1 / 1; object-fit: cover; }
+.everyday .eyebrow { margin-bottom: 1.4rem; color: var(--toddlers); }
+.everyday #problem-title {
+  font-size: clamp(2.1rem, 4.6vw, 2.9rem);
+  line-height: 1.12;
+  margin-bottom: 1.9rem;
+}
+.everyday p.stack {
+  font-size: clamp(1.1rem, 1.4vw, 1.25rem);
+  line-height: 1.55;
+}
+.everyday .pull-quote {
+  margin: 1.1rem 0 1.7rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  line-height: 1.35;
+}
 
 /* Cloud-bubble callout cards ------------------------------- */
 .bubble {
