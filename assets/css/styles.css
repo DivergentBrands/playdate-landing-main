@@ -434,6 +434,10 @@ strong { font-weight: 700; }
 .without li s { text-decoration-color: var(--toddlers); text-decoration-thickness: 2px; }
 .section--cloud .without li { background: var(--bg-blue); }
 
+/* "Made without the extras" — centered */
+.made-without { text-align: center; }
+.made-without .section__head { max-width: none; margin-inline: auto; }
+
 /* Use-case grid --------------------------------------- */
 .usecases { display: grid; gap: 1rem; }
 @media (min-width: 640px) { .usecases { grid-template-columns: minmax(0,1fr) minmax(0,1fr); } }
