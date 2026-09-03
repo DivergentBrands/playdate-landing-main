@@ -375,6 +375,7 @@ strong { font-weight: 700; }
   color: var(--ink);
 }
 .without li s { text-decoration-color: var(--toddlers); text-decoration-thickness: 2px; }
+.section--cloud .without li { background: var(--bg-blue); }
 
 /* Use-case grid --------------------------------------- */
 .usecases { display: grid; gap: 1rem; }
@@ -404,6 +405,7 @@ strong { font-weight: 700; }
   padding: 1.5rem;
 }
 .usecase--text span { color: var(--ink); background: none; font-size: .95rem; letter-spacing: .04em; }
+.section--cloud .usecase--text { background: var(--bg-blue); }
 
 /* Founding offer -------------------------------------- */
 .offer__price {
