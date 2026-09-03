@@ -271,6 +271,22 @@ strong { font-weight: 700; }
   background: var(--baby);
 }
 
+/* Pull quote (customer voice) ---------------------------- */
+.pull-quote {
+  margin: 1.6rem 0;
+  padding-left: 1.25rem;
+  border-left: 3px solid var(--kids);
+  font-family: var(--font-supporting);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1.3rem, 2.4vw, 1.7rem);
+  line-height: 1.4;
+  color: var(--ink);
+}
+
+/* Square media (1:1) ------------------------------------ */
+.everyday .split__media img { aspect-ratio: 1 / 1; object-fit: cover; }
+
 /* Cloud-bubble callout cards ------------------------------- */
 .bubble {
   background: var(--cloud-white);
