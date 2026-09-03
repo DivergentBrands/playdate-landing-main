@@ -365,6 +365,21 @@ strong { font-weight: 700; }
 #ingredients .ingredient { text-align: center; }
 #ingredients .ingredient__mark { margin-left: auto; margin-right: auto; }
 
+.ing-hocl { margin-top: clamp(3rem, 7vw, 5rem); }
+.ing-hocl__head {
+  font-size: clamp(1.5rem, 3.2vw, 2.05rem);
+  line-height: 1.18;
+  max-width: 22ch;
+  margin: 0 auto 1.75rem;
+}
+.ing-hocl__img { width: 100%; max-width: 460px; height: auto; margin: 0 auto 1.75rem; }
+.ing-hocl__body {
+  max-width: 62ch;
+  margin: 0 auto;
+  color: var(--ink-secondary);
+  font-size: 1.05rem;
+}
+
 /* HOCl education stat ----------------------------------- */
 .stat {
   display: flex; flex-wrap: wrap; align-items: baseline; gap: .6rem;
