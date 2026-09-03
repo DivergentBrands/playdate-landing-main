@@ -92,17 +92,17 @@ strong { font-weight: 700; }
   white-space: nowrap;
   padding: .95rem 1.9rem;
   border-radius: var(--radius-pill);
-  border: 2px solid var(--ink);
-  background: var(--ink);
-  color: var(--cloud-white);
+  border: 2px solid var(--kids);
+  background: var(--kids);
+  color: var(--ink);
   cursor: pointer;
-  transition: transform .15s ease, background-color .15s ease, color .15s ease;
+  transition: transform .15s ease, background-color .15s ease, color .15s ease, border-color .15s ease;
 }
-.btn:hover { transform: translateY(-2px); background: var(--ink-secondary); border-color: var(--ink-secondary); }
-.btn--ghost { background: transparent; color: var(--ink); }
-.btn--ghost:hover { background: var(--ink); color: var(--cloud-white); }
-.btn--on-ink { background: var(--cloud-white); color: var(--ink); border-color: var(--cloud-white); }
-.btn--on-ink:hover { background: var(--bg-blue); border-color: var(--bg-blue); color: var(--ink); }
+.btn:hover { transform: translateY(-2px); background: #EBBE45; border-color: #EBBE45; color: var(--ink); }
+.btn--ghost { background: transparent; color: var(--ink); border-color: var(--ink); }
+.btn--ghost:hover { background: var(--ink); color: var(--cloud-white); border-color: var(--ink); }
+.btn--on-ink { background: var(--kids); color: var(--ink); border-color: var(--kids); }
+.btn--on-ink:hover { background: #EBBE45; border-color: #EBBE45; color: var(--ink); }
 .btn--block { width: 100%; }
 
 /* Category line: baby · kids · toddlers ------------------------------- */
