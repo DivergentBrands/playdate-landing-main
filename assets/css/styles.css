@@ -517,6 +517,10 @@ strong { font-weight: 700; }
   margin-inline: auto;
 }
 
+/* Our why — full-bleed illustration -------------------- */
+.our-why { padding-block: 0; }
+.our-why__img { display: block; width: 100%; height: auto; }
+
 /* Brand statement ----------------------------------- */
 .statement { text-align: center; max-width: 30ch; margin-inline: auto; }
 .statement h2 span { display: block; }
