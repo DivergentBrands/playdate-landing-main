@@ -329,11 +329,11 @@ strong { font-weight: 700; }
   padding-left: 1rem;
   color: var(--ink-secondary);
 }
-.eyebrow--sub { display: block; margin-top: 1.75rem; }
+.eyebrow--sub { display: block; margin-top: 1.75rem; margin-bottom: .9rem; }
 
-/* Meet Playdate — left aligned, yellow eyebrow, hero-style spacing */
+/* Meet Playdate — left aligned, accent eyebrow, hero-style spacing */
 #meet .split__body { text-align: left; }
-#meet .split__body > .eyebrow:first-child { color: var(--kids); margin-bottom: 1.4rem; }
+#meet .split__body > .eyebrow:first-child { color: var(--toddlers); margin-bottom: 1.4rem; }
 #meet #meet-title {
   font-size: clamp(2.1rem, 4.6vw, 2.9rem);
   line-height: 1.12;
