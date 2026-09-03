@@ -329,6 +329,17 @@ strong { font-weight: 700; }
   padding-left: 1rem;
   color: var(--ink-secondary);
 }
+.eyebrow--sub { display: block; margin-top: 1.75rem; }
+
+/* Meet Playdate — left aligned, yellow eyebrow, hero-style spacing */
+#meet .split__body { text-align: left; }
+#meet .split__body > .eyebrow:first-child { color: var(--kids); margin-bottom: 1.4rem; }
+#meet #meet-title {
+  font-size: clamp(2.1rem, 4.6vw, 2.9rem);
+  line-height: 1.12;
+  margin-bottom: 1.9rem;
+}
+#meet .split__body p.stack { font-size: clamp(1.1rem, 1.4vw, 1.25rem); line-height: 1.55; }
 
 /* Ingredient cards --------------------------------------- */
 .ingredients { display: grid; gap: 1rem; margin-top: 1.5rem; }
