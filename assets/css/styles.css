@@ -381,9 +381,10 @@ strong { font-weight: 700; }
 
 /* HOCl education section — transparent diagram, soft shadow */
 .hocl #hocl-title {
-  font-size: clamp(2.1rem, 4.6vw, 2.9rem);
-  line-height: 1.12;
+  font-size: clamp(1.9rem, 3.8vw, 2.5rem);
+  line-height: 1.14;
   margin-bottom: 1.9rem;
+  max-width: 24ch;
 }
 .hocl .split__body p { font-size: clamp(1.1rem, 1.4vw, 1.25rem); line-height: 1.55; }
 .hocl .split__media img {
