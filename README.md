@@ -16,6 +16,31 @@ npx serve .
 python3 -m http.server 8080
 ```
 
+## Visual QA (Puppeteer)
+
+`scripts/screenshot.mjs` drives your installed Chrome via `puppeteer-core`
+(no bundled-Chromium download) to screenshot the site at real viewport
+widths — useful for checking a change before/after, or a single section in
+isolation. It serves the repo root itself, so nothing else needs to be
+running first.
+
+```bash
+npm install                                          # once, installs puppeteer-core
+npm run screenshot                                    # full page, 390/768/1440px
+npm run screenshot -- --widths=390,1440                # custom breakpoints
+npm run screenshot -- --selector="#ingredients"        # just one section, each width
+npm run screenshot -- --selector="#founding" --widths=390
+```
+
+Output goes to `.screenshots/<label>-<width>.png` (gitignored). Images are
+captured at `deviceScaleFactor: 2` for crisp inspection. Unlike driving
+headless Chrome from the command line (`--window-size=...`), Puppeteer sets
+the viewport over CDP directly, so there's no minimum-window-width floor —
+narrow mobile widths render correctly.
+
+Set `CHROME_PATH` to point at a different Chrome/Chromium binary if the
+default macOS Chrome path isn't right for your machine.
+
 ## Deploy to Vercel
 
 Import the repo in Vercel with **Framework Preset: Other**. Output/root is the

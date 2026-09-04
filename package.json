@@ -1,0 +1,13 @@
+{
+  "name": "playdate-landing",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Playdate Founding 100 landing page (static site) + Puppeteer screenshot tooling for visual QA.",
+  "type": "module",
+  "scripts": {
+    "screenshot": "node scripts/screenshot.mjs"
+  },
+  "devDependencies": {
+    "puppeteer-core": "^25.10.0"
+  }
+}
