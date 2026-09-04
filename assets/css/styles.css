@@ -202,6 +202,8 @@ strong { font-weight: 700; }
   display: block;
   font-family: var(--font-display);
   font-weight: 700;
+  font-size: clamp(2.6rem, 9vw, 4.2rem);
+  line-height: 1.08;
   color: var(--ink);
   letter-spacing: -0.02em;
   text-wrap: balance;
@@ -212,12 +214,12 @@ strong { font-weight: 700; }
   font-family: var(--font-supporting);
   font-style: italic;
   font-weight: 400;
-  font-size: clamp(1.15rem, 2.6vw, 1.8rem);
-  line-height: 1.25;
+  font-size: clamp(1.8rem, 6vw, 2.6rem);
+  line-height: 1.2;
   letter-spacing: 0;
   color: var(--ink-secondary);
 }
-@media (min-width: 560px) { .hero .hl-b { white-space: nowrap; } }
+@media (min-width: 900px) { .hero .hl-b { white-space: nowrap; } }
 .hero .signup__micro { text-align: center; }
 
 /* Signup form ------------------------------------------------- */
