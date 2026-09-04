@@ -202,15 +202,15 @@ strong { font-weight: 700; }
   display: block;
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: clamp(2.6rem, 9vw, 4.2rem);
-  line-height: 1.08;
+  font-size: clamp(2.6rem, 7vw, 3.4rem);
+  line-height: 1.1;
   color: var(--ink);
   letter-spacing: -0.02em;
   text-wrap: balance;
 }
 .hero .hl-b {
   display: block;
-  margin-top: .45em;
+  margin-top: .18em;
   font-family: var(--font-supporting);
   font-style: italic;
   font-weight: 400;
