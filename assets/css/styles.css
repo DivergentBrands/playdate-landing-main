@@ -198,11 +198,24 @@ strong { font-weight: 700; }
   color: var(--ink);
 }
 @media (min-width: 560px) { .hero__badge-text { white-space: nowrap; } }
+/* .split__body becomes a size container so the headline can be sized as a
+   fraction of ITS actual rendered width (cqi) — this stays correct whether
+   the hero is in the stacked mobile layout (column = full width) or the
+   50/50 desktop split (column = half), unlike a viewport-relative vw unit
+   which would need a hard jump right at the 820px breakpoint. */
+.hero .split__body { container-type: inline-size; }
 .hero .hl-a {
   display: block;
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: clamp(2.6rem, 7vw, 3.4rem);
+  /* Sized so the two lines stretch to meet the column's right edge (same
+     edge the signup button/pill reach) while staying on exactly 2 lines.
+     Measured empirically (headless-Chrome sweep, not eyeballed): the exact
+     3-line threshold sits at ~12.15-12.25% of the column's own width at
+     every breakpoint from 375px to 1920px — one ratio covers both the
+     stacked mobile layout and the 50/50 desktop split, no media query
+     needed. 12cqi keeps a small safety margin under that threshold. */
+  font-size: max(1.8rem, 12cqi);
   line-height: 1.1;
   color: var(--ink);
   letter-spacing: -0.02em;
@@ -214,12 +227,14 @@ strong { font-weight: 700; }
   font-family: var(--font-supporting);
   font-style: italic;
   font-weight: 400;
-  font-size: clamp(1.8rem, 6vw, 2.6rem);
+  /* Same cqi approach, tuned to sit just under .hl-a's line width — reads
+     as "barely shorter", directly under it, never past the same edge. */
+  font-size: 6.6cqi;
   line-height: 1.2;
   letter-spacing: 0;
   color: var(--ink-secondary);
+  white-space: nowrap;
 }
-@media (min-width: 900px) { .hero .hl-b { white-space: nowrap; } }
 .hero .signup__micro { text-align: center; }
 
 /* Signup form ------------------------------------------------- */
@@ -228,7 +243,7 @@ strong { font-weight: 700; }
 .signup input[type="email"] {
   flex: 1 1 auto;
   min-width: 0;
-  padding: 1.05rem 1.5rem;
+  padding: 1.05rem 1.15rem;
   font-size: 1rem;
   border-radius: var(--radius-pill);
   border: 2px solid color-mix(in srgb, var(--ink) 22%, transparent);
@@ -237,7 +252,7 @@ strong { font-weight: 700; }
 }
 @media (min-width: 560px) {
   .signup__row { flex-direction: row; flex-wrap: nowrap; }
-  .signup__row .btn { flex: 0 0 auto; padding-inline: 1.55rem; }
+  .signup__row .btn { flex: 0 0 auto; padding-inline: 1.2rem; }
 }
 .signup input[type="email"]::placeholder { color: color-mix(in srgb, var(--ink) 55%, transparent); }
 .signup input[type="email"]:focus-visible { border-color: var(--ink-secondary); outline: none; }
