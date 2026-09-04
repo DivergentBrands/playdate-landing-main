@@ -198,6 +198,10 @@ strong { font-weight: 700; }
   color: var(--ink);
 }
 @media (min-width: 560px) { .hero__badge-text { white-space: nowrap; } }
+@media (max-width: 559px) {
+  .hero__badge { padding: .5rem .85rem .5rem .7rem; gap: .35rem; }
+  .hero__badge-text { white-space: nowrap; font-size: .5rem; letter-spacing: 0.06em; }
+}
 /* .split__body becomes a size container so the headline can be sized as a
    fraction of ITS actual rendered width (cqi) — this stays correct whether
    the hero is in the stacked mobile layout (column = full width) or the
