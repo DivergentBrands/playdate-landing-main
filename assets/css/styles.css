@@ -171,8 +171,46 @@ strong { font-weight: 700; }
 }
 
 /* Hero ---------------------------------------------------------- */
-.hero { background: var(--bg-blue); overflow: hidden; }
+.hero { background: var(--bg-blue); overflow: hidden; position: relative; }
+.hero .container, .hero .split { position: relative; z-index: 1; }
 .hero .eyebrow { display: block; margin-bottom: 1.35rem; }
+
+/* Badge eyebrow (pill + sparkle icon) ------------------- */
+.hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  background: var(--cloud-white);
+  color: var(--ink);
+  border-radius: var(--radius-pill);
+  padding: .55rem 1.15rem;
+  box-shadow: var(--shadow-soft);
+}
+.hero__badge-icon { width: 16px; height: 16px; flex: 0 0 auto; fill: var(--kids); }
+
+/* Decorative sparkles + soft blobs (desktop only) -------- */
+.hero__blob, .hero__spark { display: none; pointer-events: none; }
+@media (min-width: 820px) {
+  .hero__blob {
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--baby) 32%, var(--bg-blue));
+    filter: blur(1px);
+    opacity: .6;
+    z-index: 0;
+  }
+  .hero__blob--1 { width: 260px; height: 260px; top: -70px; right: 6%; }
+  .hero__blob--2 { width: 170px; height: 170px; bottom: -50px; right: 18%; opacity: .45; }
+  .hero__spark {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    fill: var(--kids);
+  }
+  .hero__spark--1 { width: 26px; height: 26px; top: 9%; right: 3%; transform: rotate(8deg); }
+  .hero__spark--2 { width: 18px; height: 18px; bottom: 16%; left: 54%; transform: rotate(-10deg); }
+}
 .hero #hero-title { margin-bottom: 1.35rem; }
 .hero .hl-a {
   display: block;
