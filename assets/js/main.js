@@ -56,48 +56,24 @@
     }
   });
 
-  /* Proof strip rotator (mobile only) --------------------------------- */
+  /* Proof strip marquee (mobile only) ---------------------------------
+     A CSS animation slides the list left on a loop; to make that loop
+     seamless we duplicate the items once so the track can travel exactly
+     -50% before snapping back. The clone is aria-hidden (screen readers
+     only need the real list once) and is hidden by CSS at desktop widths. */
   var proofList = document.querySelector(".proof ul");
   if (proofList) {
-    var proofItems = Array.prototype.slice.call(proofList.children);
-    var proofQuery = window.matchMedia("(max-width: 559px)");
-    var proofIndex = 0;
-    var proofTimer = null;
-
-    var showProofItem = function (i) {
-      proofItems.forEach(function (li, idx) {
-        li.classList.toggle("is-active", idx === i);
-      });
-    };
-
-    var startProofRotation = function () {
-      if (proofTimer) return;
-      showProofItem(proofIndex);
-      proofTimer = window.setInterval(function () {
-        proofIndex = (proofIndex + 1) % proofItems.length;
-        showProofItem(proofIndex);
-      }, 3000);
-    };
-
-    var stopProofRotation = function () {
-      if (proofTimer) {
-        window.clearInterval(proofTimer);
-        proofTimer = null;
-      }
-      proofItems.forEach(function (li) {
-        li.classList.remove("is-active");
-      });
-    };
-
-    var handleProofQuery = function (e) {
-      if (e.matches) {
-        startProofRotation();
-      } else {
-        stopProofRotation();
-      }
-    };
-
-    proofQuery.addEventListener("change", handleProofQuery);
-    handleProofQuery(proofQuery);
+    var proofOriginalItems = Array.prototype.slice.call(proofList.children);
+    /* Marks the real (non-clone) last item so its trailing "·" separator
+       can be suppressed at desktop widths (clones are display:none there,
+       so it's visually last again) while staying enabled on mobile (where
+       it flows straight into the cloned repeat). */
+    proofOriginalItems[proofOriginalItems.length - 1].classList.add("proof__last-real");
+    proofOriginalItems.forEach(function (li) {
+      var clone = li.cloneNode(true);
+      clone.setAttribute("aria-hidden", "true");
+      clone.setAttribute("data-clone", "");
+      proofList.appendChild(clone);
+    });
   }
 })();

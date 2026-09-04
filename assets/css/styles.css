@@ -302,10 +302,28 @@ strong { font-weight: 700; }
 .proof li:not(:last-child)::after {
   content: "·"; margin-left: 1.1rem; opacity: .5;
 }
+.proof li.proof__last-real::after { content: none; }
 @media (max-width: 559px) {
-  .proof li { display: none; }
-  .proof li.is-active { display: flex; }
-  .proof li:not(:last-child)::after { content: none; }
+  .proof { overflow: hidden; }
+  .proof ul {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    width: max-content;
+    animation: proof-marquee 16s linear infinite;
+  }
+  .proof li { flex: 0 0 auto; white-space: nowrap; }
+  .proof li[data-clone] { visibility: visible; }
+  .proof li.proof__last-real::after { content: "·"; }
+}
+@media (max-width: 559px) and (prefers-reduced-motion: reduce) {
+  .proof ul { animation: none; }
+}
+@media (min-width: 560px) {
+  .proof li[data-clone] { display: none; }
+}
+@keyframes proof-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
 /* Problem list ---------------------------------------------- */
