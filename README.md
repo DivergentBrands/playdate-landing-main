@@ -45,7 +45,14 @@ default macOS Chrome path isn't right for your machine.
 
 Import the repo in Vercel with **Framework Preset: Other**. Output/root is the
 repo root (`index.html`). No install or build command needed. `vercel.json`
-sets long cache headers for `/assets/*`.
+sets a one-year `immutable` cache only on `/assets/images/*` and the logo/
+favicon SVGs (content that doesn't change between deploys); `/assets/css/*`
+and `/assets/js/*` are `must-revalidate` so browsers always pick up the latest
+styles/script on each visit, since those files change on nearly every commit
+during active iteration. If a change ever looks like it "didn't deploy," hard
+refresh (Cmd+Shift+R) before assuming the build is stale — `index.html` is
+already always-revalidate, so a mismatch is almost always a cached asset, not
+a bad deploy.
 
 ## Structure
 
