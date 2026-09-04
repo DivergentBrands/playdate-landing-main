@@ -171,44 +171,8 @@ strong { font-weight: 700; }
 }
 
 /* Hero ---------------------------------------------------------- */
-.hero { background: var(--bg-blue); overflow: hidden; position: relative; }
-.hero .container, .hero .split { position: relative; z-index: 1; }
+.hero { background: var(--bg-blue); overflow: hidden; }
 .hero .eyebrow { display: block; margin-bottom: 1.35rem; }
-
-/* Badge eyebrow (pill + sparkle icon) ------------------- */
-.hero__badge {
-  display: inline-flex;
-  align-items: center;
-  gap: .55rem;
-  background: var(--cloud-white);
-  color: var(--ink);
-  border-radius: var(--radius-pill);
-  padding: .6rem 1.3rem .6rem 1.1rem;
-  box-shadow: var(--shadow-soft);
-}
-.hero__badge-icon { width: 20px; height: 20px; flex: 0 0 auto; fill: var(--kids); }
-
-/* Decorative sparkles + soft blobs (desktop only) --------
-   Position/size for each mark is set via inline style="" on the element
-   itself (highest specificity, no cascade ambiguity across browsers).
-   These rules only supply the shared visual treatment + the single
-   mobile/desktop visibility toggle. */
-.hero__decor { display: none; pointer-events: none; }
-@media (min-width: 820px) {
-  .hero__decor { display: block; }
-}
-.hero__blob {
-  position: absolute;
-  border-radius: 50%;
-  background: color-mix(in srgb, var(--baby) 42%, var(--bg-blue));
-  filter: blur(6px);
-  opacity: .65;
-  z-index: 0;
-}
-.hero__spark {
-  position: absolute;
-  z-index: 1;
-}
 .hero #hero-title { margin-bottom: 1.35rem; }
 .hero .hl-a {
   display: block;
