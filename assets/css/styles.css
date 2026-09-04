@@ -395,6 +395,26 @@ strong { font-weight: 700; }
 /* Ingredient cards --------------------------------------- */
 .ingredients { display: grid; gap: 1rem; margin-top: 1.5rem; }
 @media (min-width: 720px) { .ingredients { grid-template-columns: repeat(3, minmax(0,1fr)); } }
+/* Mobile: swipeable carousel, starting on HOCl (DOM order Water, Salt, HOCl
+   is kept intact for desktop/nth-child color hooks below — only the visual
+   order is changed here via `order`). */
+@media (max-width: 719px) {
+  .ingredients {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    margin-inline: -1.15rem;
+    padding: 0 12% .5rem;
+  }
+  .ingredients::-webkit-scrollbar { display: none; }
+  .ingredient { flex: 0 0 78%; scroll-snap-align: center; }
+  .ingredient:nth-child(1) { order: 2; } /* Water */
+  .ingredient:nth-child(2) { order: 3; } /* Salt */
+  .ingredient:nth-child(3) { order: 1; } /* Hypochlorous acid — shown first */
+}
 .ingredient {
   background: var(--cloud-white);
   border-radius: var(--radius-card);
@@ -414,6 +434,28 @@ strong { font-weight: 700; }
 .ingredient:nth-child(1) .ingredient__mark { background: var(--baby); }
 .ingredient:nth-child(2) .ingredient__mark { background: var(--toddlers); }
 .ingredient:nth-child(3) .ingredient__mark { background: var(--ink-secondary); }
+
+/* Swipe hint — shown only where the carousel is active (mobile only) */
+.ingredients__hint, .usecases__hint {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: .35rem;
+  margin-top: 1rem;
+  font-family: var(--font-utility);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-size: .72rem;
+  color: var(--ink-secondary);
+}
+.hint-arrow { display: inline-block; animation: hint-nudge 1.4s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) { .hint-arrow { animation: none; } }
+@keyframes hint-nudge {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(4px); }
+}
+@media (max-width: 719px) { .ingredients__hint { display: flex; } }
 
 /* Ingredient section — centered, no image */
 #ingredients { text-align: center; }
@@ -504,6 +546,22 @@ strong { font-weight: 700; }
 .usecases { display: grid; gap: 1rem; }
 @media (min-width: 640px) { .usecases { grid-template-columns: minmax(0,1fr) minmax(0,1fr); } }
 @media (min-width: 960px) { .usecases { grid-template-columns: repeat(3, minmax(0,1fr)); } }
+/* Mobile: swipeable image carousel instead of a tall single-column stack */
+@media (max-width: 639px) {
+  .usecases {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    margin-inline: -1.15rem;
+    padding: 0 12% .5rem;
+  }
+  .usecases::-webkit-scrollbar { display: none; }
+  .usecase { flex: 0 0 78%; scroll-snap-align: center; }
+  .usecases__hint { display: flex; }
+}
 .usecase {
   position: relative; overflow: hidden;
   border-radius: var(--radius-card);
