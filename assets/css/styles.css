@@ -179,14 +179,14 @@ strong { font-weight: 700; }
 .hero__badge {
   display: inline-flex;
   align-items: center;
-  gap: .4rem;
+  gap: .55rem;
   background: var(--cloud-white);
   color: var(--ink);
   border-radius: var(--radius-pill);
-  padding: .45rem 1rem;
+  padding: .6rem 1.3rem .6rem 1.1rem;
   box-shadow: var(--shadow-soft);
 }
-.hero__badge-icon { width: 13px; height: 13px; flex: 0 0 auto; fill: var(--kids); }
+.hero__badge-icon { width: 20px; height: 20px; flex: 0 0 auto; fill: var(--kids); }
 
 /* Decorative sparkles + soft blobs (desktop only) --------
    Position/size for each mark is set via inline style="" on the element
