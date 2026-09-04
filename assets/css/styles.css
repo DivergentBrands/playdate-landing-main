@@ -188,28 +188,26 @@ strong { font-weight: 700; }
 }
 .hero__badge-icon { width: 16px; height: 16px; flex: 0 0 auto; fill: var(--kids); }
 
-/* Decorative sparkles + soft blobs (desktop only) -------- */
-.hero__blob, .hero__spark { display: none; pointer-events: none; }
+/* Decorative sparkles + soft blobs (desktop only) --------
+   Position/size for each mark is set via inline style="" on the element
+   itself (highest specificity, no cascade ambiguity across browsers).
+   These rules only supply the shared visual treatment + the single
+   mobile/desktop visibility toggle. */
+.hero__decor { display: none; pointer-events: none; }
 @media (min-width: 820px) {
-  .hero__blob {
-    display: block;
-    position: absolute;
-    border-radius: 50%;
-    background: color-mix(in srgb, var(--baby) 32%, var(--bg-blue));
-    filter: blur(1px);
-    opacity: .6;
-    z-index: 0;
-  }
-  .hero__blob--1 { width: 260px; height: 260px; top: -70px; right: 6%; }
-  .hero__blob--2 { width: 170px; height: 170px; bottom: -50px; right: 18%; opacity: .45; }
-  .hero__spark {
-    display: block;
-    position: absolute;
-    z-index: 1;
-    fill: var(--kids);
-  }
-  .hero__spark--1 { width: 26px; height: 26px; top: 9%; right: 3%; transform: rotate(8deg); }
-  .hero__spark--2 { width: 18px; height: 18px; bottom: 16%; left: 54%; transform: rotate(-10deg); }
+  .hero__decor { display: block; }
+}
+.hero__blob {
+  position: absolute;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--baby) 32%, var(--bg-blue));
+  filter: blur(1px);
+  opacity: .6;
+  z-index: 0;
+}
+.hero__spark {
+  position: absolute;
+  z-index: 1;
 }
 .hero #hero-title { margin-bottom: 1.35rem; }
 .hero .hl-a {
