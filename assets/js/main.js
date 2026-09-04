@@ -55,4 +55,49 @@
       input.setAttribute("aria-invalid", msg ? "true" : "false");
     }
   });
+
+  /* Proof strip rotator (mobile only) --------------------------------- */
+  var proofList = document.querySelector(".proof ul");
+  if (proofList) {
+    var proofItems = Array.prototype.slice.call(proofList.children);
+    var proofQuery = window.matchMedia("(max-width: 559px)");
+    var proofIndex = 0;
+    var proofTimer = null;
+
+    var showProofItem = function (i) {
+      proofItems.forEach(function (li, idx) {
+        li.classList.toggle("is-active", idx === i);
+      });
+    };
+
+    var startProofRotation = function () {
+      if (proofTimer) return;
+      showProofItem(proofIndex);
+      proofTimer = window.setInterval(function () {
+        proofIndex = (proofIndex + 1) % proofItems.length;
+        showProofItem(proofIndex);
+      }, 3000);
+    };
+
+    var stopProofRotation = function () {
+      if (proofTimer) {
+        window.clearInterval(proofTimer);
+        proofTimer = null;
+      }
+      proofItems.forEach(function (li) {
+        li.classList.remove("is-active");
+      });
+    };
+
+    var handleProofQuery = function (e) {
+      if (e.matches) {
+        startProofRotation();
+      } else {
+        stopProofRotation();
+      }
+    };
+
+    proofQuery.addEventListener("change", handleProofQuery);
+    handleProofQuery(proofQuery);
+  }
 })();

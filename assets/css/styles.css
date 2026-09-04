@@ -302,6 +302,11 @@ strong { font-weight: 700; }
 .proof li:not(:last-child)::after {
   content: "·"; margin-left: 1.1rem; opacity: .5;
 }
+@media (max-width: 559px) {
+  .proof li { display: none; }
+  .proof li.is-active { display: flex; }
+  .proof li:not(:last-child)::after { content: none; }
+}
 
 /* Problem list ---------------------------------------------- */
 .tap-list { list-style: none; padding: 0; }
