@@ -723,11 +723,12 @@ strong { font-weight: 700; }
 
 /* Footer ---------------------------------------- */
 .final-cta { padding-bottom: clamp(2rem, 5vw, 3rem); }
-.final-cta__price-line { font-family: var(--font-utility); letter-spacing: .06em; margin-top: 1rem; }
-.final-cta__was { opacity: .75; }
+#final-title { margin-bottom: 1.1rem; }
+.final-cta__price-line { font-family: var(--font-utility); letter-spacing: .06em; margin-top: .5rem; }
+.final-cta__was { opacity: .75; margin-left: .5em; }
 @media (max-width: 819px) {
   .final-cta { padding-bottom: clamp(1rem, 2.5vw, 1.5rem); }
-  .final-cta__was { display: block; margin-top: .3rem; }
+  .final-cta__was { display: block; margin-left: 0; margin-top: .3rem; }
 }
 .site-footer { background: var(--ink); color: var(--cloud-white); padding-block: 2rem 2.5rem; }
 .site-footer .container {
