@@ -583,7 +583,7 @@ strong { font-weight: 700; }
     padding: 0 12% .5rem;
   }
   .usecases::-webkit-scrollbar { display: none; }
-  .usecase { flex: 0 0 117%; scroll-snap-align: center; }
+  .usecase { flex: 0 0 100%; scroll-snap-align: center; }
   .usecases__hint { display: flex; }
 }
 @media (max-width: 639px) {
