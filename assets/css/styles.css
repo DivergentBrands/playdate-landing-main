@@ -654,6 +654,7 @@ strong { font-weight: 700; }
   white-space: nowrap;
 }
 .offer__was { font-family: var(--font-utility); letter-spacing: .06em; opacity: .85; font-size: .95rem; margin-top: .4rem; }
+#founding .offer__was + .stack { margin-top: 1.4rem; }
 .offer__strike {
   text-decoration-line: line-through;
   text-decoration-color: #E4572E;
@@ -722,8 +723,11 @@ strong { font-weight: 700; }
 
 /* Footer ---------------------------------------- */
 .final-cta { padding-bottom: clamp(2rem, 5vw, 3rem); }
+.final-cta__price-line { font-family: var(--font-utility); letter-spacing: .06em; margin-top: 1rem; }
+.final-cta__was { opacity: .75; }
 @media (max-width: 819px) {
   .final-cta { padding-bottom: clamp(1rem, 2.5vw, 1.5rem); }
+  .final-cta__was { display: block; margin-top: .3rem; }
 }
 .site-footer { background: var(--ink); color: var(--cloud-white); padding-block: 2rem 2.5rem; }
 .site-footer .container {
@@ -750,6 +754,12 @@ strong { font-weight: 700; }
 }
 .site-footer__meta a { text-decoration: none; opacity: .85; }
 .site-footer__meta a:hover { opacity: 1; text-decoration: underline; }
+@media (max-width: 819px) {
+  .site-footer { padding-block: 1.1rem 1.4rem; }
+  .site-footer__logo { margin-bottom: .9rem; }
+  .tags { display: none; }
+  .site-footer__meta { margin-top: 1rem; padding-top: 1rem; }
+}
 
 /* Cloud / wave dividers ------------------------- */
 .divider { display: block; width: 100%; height: auto; }
