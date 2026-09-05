@@ -515,6 +515,16 @@ strong { font-weight: 700; }
   max-width: 24ch;
 }
 .hocl .split__body p { font-size: clamp(1.1rem, 1.4vw, 1.25rem); line-height: 1.55; }
+/* Mobile: title centered above the image, remaining text below it.
+   `.split__body` is unwrapped so its children (title + paragraph stack)
+   become direct flex items of `.split` alongside `.split__media`, letting
+   `order` place the title first without touching desktop's layout, where
+   `.split__body` stays intact with the title above the paragraphs. */
+@media (max-width: 819px) {
+  .hocl .split__body { display: contents; }
+  .hocl .split__body > * { width: 100%; }
+  .hocl #hocl-title { order: -1; text-align: center; margin-inline: auto; }
+}
 .hocl .split__media img {
   box-shadow: none;
   border-radius: 0;
