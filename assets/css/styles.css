@@ -383,7 +383,7 @@ strong { font-weight: 700; }
 
 /* "Made for little-hand moments" list --------------------- */
 .moments { list-style: none; padding: 0; display: grid; gap: .55rem; }
-@media (max-width: 559px) { .moments { grid-template-columns: repeat(3, minmax(0,1fr)); } }
+@media (max-width: 559px) { .moments { grid-template-columns: repeat(2, minmax(0,1fr)); } }
 @media (min-width: 560px) { .moments { grid-template-columns: minmax(0,1fr) minmax(0,1fr); } }
 .moments li { display: flex; align-items: center; gap: .6rem; font-family: var(--font-utility); font-weight: 600; font-size: .92rem; }
 .moments li::before {
