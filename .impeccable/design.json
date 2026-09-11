@@ -1,0 +1,235 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-10T00:00:00Z",
+  "title": "Design System: Playdate Founding 100",
+  "extensions": {
+    "colorMeta": {
+      "bg-blue": {
+        "role": "secondary",
+        "displayName": "Background Blue",
+        "canonical": "#B9DDF2",
+        "tonalRamp": ["oklch(28% 0.06 235)", "oklch(38% 0.08 235)", "oklch(48% 0.09 235)", "oklch(58% 0.09 235)", "oklch(68% 0.08 235)", "oklch(78% 0.06 235)", "oklch(88% 0.04 235)", "oklch(95% 0.02 235)"]
+      },
+      "cloud-white": {
+        "role": "neutral",
+        "displayName": "Cloud White",
+        "canonical": "#F9F7F2",
+        "tonalRamp": ["oklch(22% 0.006 85)", "oklch(34% 0.006 85)", "oklch(46% 0.007 85)", "oklch(58% 0.007 85)", "oklch(70% 0.008 85)", "oklch(82% 0.008 85)", "oklch(92% 0.007 85)", "oklch(97.5% 0.006 85)"]
+      },
+      "ink": {
+        "role": "primary",
+        "displayName": "Primary Ink",
+        "canonical": "#08397C",
+        "tonalRamp": ["oklch(20% 0.09 260)", "oklch(28% 0.12 260)", "oklch(35% 0.14 260)", "oklch(43% 0.15 260)", "oklch(53% 0.14 260)", "oklch(64% 0.11 260)", "oklch(78% 0.07 260)", "oklch(90% 0.03 260)"]
+      },
+      "ink-secondary": {
+        "role": "primary",
+        "displayName": "Secondary Ink",
+        "canonical": "#114F8F",
+        "tonalRamp": ["oklch(24% 0.09 258)", "oklch(32% 0.12 258)", "oklch(40% 0.14 258)", "oklch(48% 0.14 258)", "oklch(58% 0.13 258)", "oklch(69% 0.10 258)", "oklch(81% 0.06 258)", "oklch(91% 0.03 258)"]
+      },
+      "ink-accent": {
+        "role": "primary",
+        "displayName": "Accent Ink",
+        "canonical": "#064D8D",
+        "tonalRamp": ["oklch(22% 0.09 259)", "oklch(30% 0.12 259)", "oklch(38% 0.14 259)", "oklch(46% 0.15 259)", "oklch(56% 0.13 259)", "oklch(67% 0.10 259)", "oklch(80% 0.06 259)", "oklch(90% 0.03 259)"]
+      },
+      "baby": {
+        "role": "tertiary",
+        "displayName": "Baby Blue",
+        "canonical": "#24A8DA",
+        "tonalRamp": ["oklch(30% 0.07 232)", "oklch(40% 0.09 232)", "oklch(50% 0.11 232)", "oklch(60% 0.12 232)", "oklch(68% 0.12 232)", "oklch(78% 0.09 232)", "oklch(87% 0.06 232)", "oklch(94% 0.03 232)"]
+      },
+      "kids": {
+        "role": "tertiary",
+        "displayName": "Kids Yellow",
+        "canonical": "#F6CF69",
+        "tonalRamp": ["oklch(35% 0.06 92)", "oklch(46% 0.08 92)", "oklch(57% 0.10 92)", "oklch(68% 0.12 92)", "oklch(78% 0.13 92)", "oklch(86% 0.11 92)", "oklch(92% 0.08 92)", "oklch(96% 0.04 92)"]
+      },
+      "kids-deep": {
+        "role": "tertiary",
+        "displayName": "Kids Yellow Deep",
+        "canonical": "#EBBE45",
+        "purpose": "Primary button hover/active fill.",
+        "tonalRamp": ["oklch(33% 0.06 88)", "oklch(44% 0.08 88)", "oklch(55% 0.10 88)", "oklch(66% 0.12 88)", "oklch(75% 0.13 88)", "oklch(84% 0.11 88)", "oklch(91% 0.08 88)", "oklch(96% 0.04 88)"]
+      },
+      "toddlers": {
+        "role": "tertiary",
+        "displayName": "Toddler Orange",
+        "canonical": "#DF6334",
+        "purpose": "'toddlers' category word/dot only — never as text on a light ground (use ink-toddler).",
+        "tonalRamp": ["oklch(30% 0.10 42)", "oklch(40% 0.13 42)", "oklch(50% 0.16 42)", "oklch(60% 0.17 42)", "oklch(66% 0.17 42)", "oklch(76% 0.13 42)", "oklch(86% 0.08 42)", "oklch(93% 0.04 42)"]
+      },
+      "ink-toddler": {
+        "role": "tertiary",
+        "displayName": "Ink Toddler",
+        "canonical": "#BD4A1E",
+        "purpose": "Accent-warm TEXT on a light ground (Meet / everyday eyebrows, form error) — darkened toddler-orange, >=4.5:1 on cloud-white.",
+        "tonalRamp": ["oklch(26% 0.11 40)", "oklch(34% 0.13 40)", "oklch(42% 0.15 40)", "oklch(50% 0.16 40)", "oklch(58% 0.15 40)", "oklch(70% 0.11 40)", "oklch(82% 0.07 40)", "oklch(92% 0.03 40)"]
+      },
+      "mark-water": {
+        "role": "tertiary",
+        "displayName": "Mark Water",
+        "canonical": "#1C6FA0",
+        "purpose": "Fill of the Water (H₂O) ingredient mark — darkened Baby Blue so cloud-white mark text meets AA.",
+        "tonalRamp": ["oklch(24% 0.07 235)", "oklch(32% 0.09 235)", "oklch(40% 0.10 235)", "oklch(48% 0.11 235)", "oklch(58% 0.10 235)", "oklch(70% 0.08 235)", "oklch(83% 0.05 235)", "oklch(93% 0.02 235)"]
+      },
+      "mark-salt": {
+        "role": "tertiary",
+        "displayName": "Mark Salt",
+        "canonical": "#B4431C",
+        "purpose": "Fill of the Salt (NaCl) ingredient mark — darkened Toddler Orange so cloud-white mark text meets AA.",
+        "tonalRamp": ["oklch(26% 0.11 40)", "oklch(34% 0.13 40)", "oklch(42% 0.15 40)", "oklch(50% 0.16 40)", "oklch(58% 0.15 40)", "oklch(70% 0.11 40)", "oklch(82% 0.07 40)", "oklch(92% 0.03 40)"]
+      },
+      "on-ink-muted": {
+        "role": "neutral", "displayName": "On-Ink Muted", "canonical": "#CDE2F3",
+        "purpose": "Dimmed text on --ink sections (microcopy, disclaimer) — a solid tint, never opacity."
+      },
+      "on-ink-faint": {
+        "role": "neutral", "displayName": "On-Ink Faint", "canonical": "#B3C9E0",
+        "purpose": "Lowest-priority print on --ink (offer limits)."
+      },
+      "strike": {
+        "role": "tertiary", "displayName": "Strike", "canonical": "#E4572E",
+        "purpose": "Line-through RULE on the struck regular price (the struck text itself is cloud-white)."
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "The hero headline only; splits into a Quicksand bold line and an italic Lora second line." },
+      "headline": { "displayName": "Headline", "purpose": "Section titles (h2)." },
+      "title": { "displayName": "Title", "purpose": "Ingredient card names, success-panel heading, FAQ answer parents (h3)." },
+      "body": { "displayName": "Body", "purpose": "All paragraph copy; Quicksand at weight 500." },
+      "supporting": { "displayName": "Supporting", "purpose": "Italic Lora for pull-quotes and one-line warm asides." },
+      "label": { "displayName": "Label", "purpose": "Uppercase Montserrat for eyebrows, chips, button text, banners." }
+    },
+    "shadows": [
+      { "name": "soft-ambient", "value": "0 18px 40px -24px rgba(8, 57, 124, 0.35)", "purpose": "The resting shadow. Lifts cards, the signup success panel, use-case tiles, and the hero badge above a section band." },
+      { "name": "diagram-float", "value": "drop-shadow(0 16px 34px rgba(8, 57, 124, 0.22))", "purpose": "Softer variant applied as a filter to the transparent HOCl diagram PNG so it floats without a card." },
+      { "name": "hover-lift", "value": "0 14px 30px -16px rgba(8, 57, 124, 0.55)", "purpose": "Button :hover only — a response to state. On --ink: 0 14px 30px -14px rgba(0,0,0,0.5)." },
+      { "name": "focus-glow", "value": "0 0 0 4px color-mix(in srgb, #114F8F 20%, transparent)", "purpose": "Email input :focus-visible ring, on top of the standard focus outline." }
+    ],
+    "motion": [
+      { "name": "reveal", "value": "opacity/translateY(14px) .7s cubic-bezier(.16,1,.3,1), once, <=4-step 60ms stagger", "purpose": "Scroll entrance for section blocks (JS adds .has-reveal). prefers-reduced-motion: skipped." },
+      { "name": "success-settle", "value": ".5s cubic-bezier(.16,1,.3,1) + .45s checkmark stroke", "purpose": "Signup confirmation card settles in with a self-drawing checkmark." },
+      { "name": "state-ease", "value": "150ms ease (+ box-shadow 200ms)", "purpose": "Button hover: background/border/color/transform + hover-lift shadow." },
+      { "name": "marker-ease", "value": "200ms ease", "purpose": "FAQ +/x marker rotation." },
+      { "name": "faq-open", "value": ".3s ease", "purpose": "FAQ answer fade/rise on open. prefers-reduced-motion: skipped." },
+      { "name": "hint-nudge", "value": "1.4s ease-in-out infinite", "purpose": "The 'Swipe' arrow hint on mobile carousels; disabled under prefers-reduced-motion." }
+    ],
+    "breakpoints": [
+      { "name": "xs", "value": "520px" },
+      { "name": "sm", "value": "560px" },
+      { "name": "md", "value": "640px" },
+      { "name": "lg", "value": "720px" },
+      { "name": "split", "value": "820px" },
+      { "name": "xl", "value": "960px" },
+      { "name": "container", "value": "1120px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Every reserve/join CTA, on both light and ink grounds.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#founding\">Reserve my $9.99 bottle</a>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; font-family: Montserrat, system-ui, sans-serif; font-weight: 700; font-size: 0.95rem; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; white-space: nowrap; padding: 0.95rem 1.9rem; border-radius: 100px; border: 2px solid #F6CF69; background: #F6CF69; color: #08397C; cursor: pointer; transition: transform 0.15s ease, background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease, box-shadow 0.2s ease; } .ds-btn-primary:hover { transform: translateY(-2px); background: #EBBE45; border-color: #EBBE45; color: #08397C; box-shadow: 0 14px 30px -16px rgba(8,57,124,0.55); } .ds-btn-primary:focus-visible { outline: 3px solid #114F8F; outline-offset: 3px; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary action: navy outline on blue. Defined in the system, currently unused on the page.",
+      "html": "<a class=\"ds-btn-ghost\" href=\"#\">Learn more</a>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; font-family: Montserrat, system-ui, sans-serif; font-weight: 700; font-size: 0.95rem; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; white-space: nowrap; padding: 0.95rem 1.9rem; border-radius: 100px; border: 2px solid #08397C; background: transparent; color: #08397C; cursor: pointer; transition: transform 0.15s ease, background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease; } .ds-btn-ghost:hover { background: #08397C; color: #F9F7F2; border-color: #08397C; } .ds-btn-ghost:focus-visible { outline: 3px solid #114F8F; outline-offset: 3px; }"
+    },
+    {
+      "name": "Email Input",
+      "kind": "input",
+      "refersTo": "input-email",
+      "description": "Signup field; stacks above the button on mobile, shares a row at 560px.",
+      "html": "<input class=\"ds-input-email\" type=\"email\" placeholder=\"Enter your best email\" autocomplete=\"email\">",
+      "css": ".ds-input-email { flex: 1 1 auto; min-width: 0; padding: 1.05rem 1.15rem; font-size: 1rem; font-family: Quicksand, system-ui, sans-serif; border-radius: 100px; border: 2px solid color-mix(in srgb, #08397C 22%, transparent); background: #F9F7F2; color: #08397C; } .ds-input-email::placeholder { color: color-mix(in srgb, #08397C 55%, transparent); } .ds-input-email:focus-visible { border-color: #114F8F; outline: none; }"
+    },
+    {
+      "name": "Callout Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Cloud-bubble callout / ingredient card; always contrasts its section band.",
+      "html": "<div class=\"ds-card\"><h3>Water</h3><p>The gentle base of our formula.</p></div>",
+      "css": ".ds-card { background: #F9F7F2; color: #08397C; border-radius: 22px; padding: clamp(1.3rem, 3vw, 2rem); box-shadow: 0 18px 40px -24px rgba(8, 57, 124, 0.35); } .ds-card h3 { font-family: Quicksand, system-ui, sans-serif; font-weight: 700; line-height: 1.12; letter-spacing: -0.02em; margin: 0 0 0.3rem; } .ds-card p { font-family: Quicksand, system-ui, sans-serif; font-weight: 500; font-size: 0.95rem; line-height: 1.4; color: #114F8F; margin: 0; }"
+    },
+    {
+      "name": "Ingredient Mark",
+      "kind": "custom",
+      "refersTo": "ingredient-mark-hocl",
+      "description": "62px circle holding a formula shorthand; fills are Mark Water #1C6FA0 / Mark Salt #B4431C / Secondary Ink #114F8F by DOM order (first two darkened from the raw accents so cloud-white text meets AA).",
+      "html": "<div class=\"ds-ingredient-mark\">HOCl</div>",
+      "css": ".ds-ingredient-mark { width: 62px; height: 62px; border-radius: 50%; display: grid; place-content: center; font-family: Montserrat, system-ui, sans-serif; font-weight: 700; font-size: 0.92rem; line-height: 1; white-space: nowrap; color: #F9F7F2; background: #114F8F; } .ds-ingredient-mark.is-water { background: #1C6FA0; } .ds-ingredient-mark.is-salt { background: #B4431C; }"
+    },
+    {
+      "name": "FAQ Item",
+      "kind": "custom",
+      "refersTo": "faq-item",
+      "description": "Native details/summary with a rotating +/x marker and a hairline divider; no card.",
+      "html": "<details class=\"ds-faq\"><summary>Is Playdate a hand sanitizer?</summary><p>No. Playdate is an alcohol-free hand + skin cleanser.</p></details>",
+      "css": ".ds-faq { border-bottom: 1px solid color-mix(in srgb, #08397C 16%, transparent); padding: 1rem 0; } .ds-faq summary { font-family: Quicksand, system-ui, sans-serif; font-weight: 700; font-size: 1.05rem; color: #08397C; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; } .ds-faq summary::-webkit-details-marker { display: none; } .ds-faq summary::after { content: \"+\"; font-weight: 700; font-size: 1.4rem; line-height: 1; color: #114F8F; flex: 0 0 auto; transition: transform 0.2s ease; } .ds-faq[open] summary::after { transform: rotate(45deg); } .ds-faq p { margin-top: 0.7rem; color: #114F8F; font-size: 0.98rem; font-family: Quicksand, system-ui, sans-serif; }"
+    },
+    {
+      "name": "Section Eyebrow",
+      "kind": "custom",
+      "refersTo": "label",
+      "description": "Uppercase Montserrat kicker above a section heading.",
+      "html": "<p class=\"ds-eyebrow\">Meet Playdate</p>",
+      "css": ".ds-eyebrow { font-family: Montserrat, system-ui, sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; font-size: 0.78rem; color: #114F8F; margin: 0; }"
+    },
+    {
+      "name": "Proof Chip",
+      "kind": "chip",
+      "refersTo": "proof-chip",
+      "description": "Claim chip on the full-width Primary Ink proof strip, middot-separated.",
+      "html": "<li class=\"ds-proof-chip\">Alcohol-free</li>",
+      "css": ".ds-proof-chip { list-style: none; font-family: Montserrat, system-ui, sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.74rem; color: #F9F7F2; display: inline-flex; align-items: center; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Clear-Sky Field",
+    "overview": "The page reads like a bright, open sky. Wide bands of soft Background Blue and Cloud White stack down the scroll, each one a calm field with room to breathe; a single rounded wave marks the one transition where the ground changes from sky to cream, echoing the bottle label. Everything is rounded — pill buttons, 22px cards, circular ingredient marks — and nothing has a hard edge or a sharp corner. The mood is calm, tender, honest, and quietly premium. Warmth comes from real photography of little hands in natural light set against the cool sky palette; structure comes from generous whitespace, not rules or boxes.\n\nThe deliberate opposite of this system is the clinical germ-fear sanitizer look: warning reds and greens, shield and germ iconography, \"kills 99.9%\" urgency, sharp edges, and hospital whites. Playdate never raises its voice. Where a fear brand would shout a threat, this design leaves quiet space and lets a plain sentence of navy Quicksand do the work.\n\nType is a three-voice pairing: rounded Quicksand for every headline and the wordmark, utilitarian Montserrat in all-caps for eyebrows, chips, and button labels, and italic Lora for the warm human asides. Depth is minimal — surfaces are flat, lifted only by one soft blue ambient shadow on cards and the signup success card.",
+    "keyCharacteristics": [
+      "Alternating Background Blue / Cloud White / Primary Ink section bands as the primary structural device",
+      "Everything rounded: pill buttons and inputs (100px), 22px cards, circular marks",
+      "One soft ambient shadow, used sparingly; otherwise flat",
+      "Three type voices with fixed jobs: Quicksand display, Montserrat labels, Lora warmth",
+      "Real warm-toned photography of little hands against the cool palette",
+      "Accent colors appear only as the baby·kids·toddlers set, never as large fields"
+    ],
+    "rules": [
+      { "name": "The Let-the-Sky-Breathe Rule", "body": "Roughly 70% of any screen is Background Blue and Cloud White ground, ~20% is navy ink, and no more than ~10% is accent-color pop. The three accents appear together as the baby·kids·toddlers set, sparingly, and never as a large color field — no full-width accent sections, no accent-colored panels. Their rarity is what makes them read as playful rather than loud.", "section": "colors" },
+      { "name": "The Navy-Carries-the-Words Rule", "body": "Text is Primary, Secondary, or Accent Ink (or Cloud White on ink grounds) — never a raw category accent. Accent-warm copy uses the darkened text-safe sibling (--ink-toddler), never --toddlers / --baby themselves. Accents are fills behind navy text or small graphic marks.", "section": "colors" },
+      { "name": "The Three-Voice Rule", "body": "Every piece of text is Quicksand (headings + body), Montserrat (uppercase labels only), or italic Lora (warm asides only). A fourth treatment, or Lora set upright, or Montserrat in sentence case, is off the system.", "section": "typography" },
+      { "name": "The Short-Caps Rule", "body": "All-caps + wide tracking is for labels of a few words. Never set a full sentence or a multi-item list in uppercase.", "section": "typography" },
+      { "name": "The Flat-Field Rule", "body": "Surfaces are flat at rest. The soft ambient shadow appears only on genuine cards floating above a section band. Shadow may appear as a response to state (button hover, input focus) and nowhere else. No borders used as fake elevation; dividers are 1px color-mix hairlines at ~12–16% ink.", "section": "elevation" },
+      { "name": "The Exhale Rule", "body": "Motion follows one thesis — the page exhales as you scroll. Gentle entrance (blocks rise 14px + fade, once) and state feedback (hover lift, FAQ open, a confirmation checkmark) only. No parallax, scroll-jacking, marquee, or looping decoration. Every animation is gated on prefers-reduced-motion, and the reduced path keeps each state change instantly.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do alternate --blue / --cloud / --ink section bands so no two neighbors share a ground, and give each band clamp(3rem, 8vw, 5.5rem) vertical padding.",
+      "Do keep every corner rounded — pill (100px) for interactive/label elements, 22px for cards, 50% for marks and bullets.",
+      "Do use the soft ambient shadow (0 18px 40px -24px rgba(8,57,124,.35)) only on cards that float above a band.",
+      "Do hold text to Primary/Secondary/Accent Ink (or Cloud White on ink), and put the category accents behind navy text or into small marks.",
+      "Do keep the accent trio together and rare (the Let-the-Sky-Breathe Rule): ~70% blue/white ground, ~20% navy, <=10% accent.",
+      "Do set warm real photography of little hands in natural light against the cool palette; keep the product on hands/skin only.",
+      "Do reserve italic Lora for pull-quotes and one-line warm asides."
+    ],
+    "donts": [
+      "Don't use a raw category accent (#24A8DA / #F6CF69 / #DF6334) as a text color on a light ground — use --ink-toddler for accent-warm text, or keep the accent as a fill.",
+      "Don't paint a large surface (a full section, a wide panel) in an accent color; accents are pops, not fields.",
+      "Don't add a colored border-left/-right above 1px to a card, list item, callout, or note — the side-tab is the classic AI-UI tell; use a hairline footnote instead.",
+      "Don't add a resting shadow tier beyond the soft ambient, or a shadow on a button/input at rest — state-response shadow only.",
+      "Don't auto-scroll, marquee, parallax, or loop decoration; motion is for entrance and state, once, and always behind prefers-reduced-motion.",
+      "Don't introduce sharp corners, hard drop shadows, warning reds/greens, shields, or germ iconography — the clinical-sanitizer look is the anti-reference.",
+      "Don't set sentences or lists in all-caps; uppercase is for short Montserrat labels only.",
+      "Don't add a fourth type treatment or use Lora upright / Montserrat in sentence case.",
+      "Don't let the wave motif repeat; it appears exactly once, at the blue->cream HOCl transition."
+    ]
+  }
+}

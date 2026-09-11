@@ -7,15 +7,35 @@
   --ink-secondary:  #114F8F;  /* descriptors, subheads */
   --ink-accent:     #064D8D;  /* ingredients, fine print */
 
-  /* Category accents — the "baby · kids · toddlers" line */
+  /* Category accents — the "baby · kids · toddlers" line.
+     These are FILL colors. For accent-colored text on a light ground use
+     --ink-toddler (the others already meet contrast as text is rare). */
   --baby:      #24A8DA;
   --kids:      #F6CF69;
   --toddlers:  #DF6334;
+  --kids-deep:     #EBBE45;   /* --kids hover/active */
+  --ink-toddler:   #BD4A1E;   /* toddler-orange, darkened for text on --cloud-white (AA) */
+
+  /* Ingredient-mark fills — darkened from --baby / --toddlers so the
+     cloud-white mark text meets AA on the circle (5.2:1 / 5.3:1). */
+  --mark-water: #1C6FA0;
+  --mark-salt:  #B4431C;
+  /* --mark-hocl uses --ink-secondary, which already passes. */
+
+  /* On the --ink (navy) sections: solid dimmed tints, never opacity. */
+  --on-ink-muted:   #CDE2F3;  /* fine print / microcopy */
+  --on-ink-faint:   #B3C9E0;  /* offer limits, lowest-priority print */
+  --on-ink-eyebrow: #A9CDEA;  /* eyebrows */
+  --on-ink-error:   #FFC7A6;  /* form error text */
+  --strike:         #E4572E;  /* strike-through rule on regular price */
 
   /* Type families */
   --font-display:    'Quicksand', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --font-utility:    'Montserrat', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --font-supporting: 'Lora', Georgia, 'Times New Roman', serif;
+
+  /* Type scale — one deliberate step per role */
+  --step-h2: clamp(1.95rem, 3.1vw + 0.55rem, 2.75rem);
 
   /* Shape */
   --radius-card: 22px;
@@ -34,6 +54,8 @@
   --maxw: 1120px;
   --maxw-narrow: 760px;
 
-  /* Soft elevation (used sparingly) */
-  --shadow-soft: 0 18px 40px -24px rgba(8, 57, 124, .35);
+  /* Elevation */
+  --shadow-soft:  0 18px 40px -24px rgba(8, 57, 124, .35);  /* resting card lift */
+  --shadow-hover: 0 14px 30px -16px rgba(8, 57, 124, .55);  /* button hover (state only) */
+  --shadow-hover-ink: 0 14px 30px -14px rgba(0, 0, 0, .5);  /* button hover on --ink */
 }

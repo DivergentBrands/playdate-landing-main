@@ -2,9 +2,14 @@
    - Sticky header condense on scroll
    - Signup form: client-side validation + success swap (prototype only).
      On Shopify this <form> is wrapped in {% form 'customer' %} and posts natively.
+   - Scroll entrance + a considered confirmation moment (Impeccable · delight),
+     all gated on prefers-reduced-motion.
 */
 (function () {
   "use strict";
+
+  var reduce =
+    window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   /* Header condense ---------------------------------------------------- */
   var header = document.querySelector(".site-header");
@@ -44,6 +49,7 @@
          On Shopify, remove this handler and let {% form 'customer' %} submit. */
       form.hidden = true;
       if (successEl) {
+        celebrate(successEl);
         successEl.hidden = false;
         successEl.setAttribute("tabindex", "-1");
         successEl.focus();
@@ -56,24 +62,58 @@
     }
   });
 
-  /* Proof strip marquee (mobile only) ---------------------------------
-     A CSS animation slides the list left on a loop; to make that loop
-     seamless we duplicate the items once so the track can travel exactly
-     -50% before snapping back. The clone is aria-hidden (screen readers
-     only need the real list once) and is hidden by CSS at desktop widths. */
-  var proofList = document.querySelector(".proof ul");
-  if (proofList) {
-    var proofOriginalItems = Array.prototype.slice.call(proofList.children);
-    /* Marks the real (non-clone) last item so its trailing "·" separator
-       can be suppressed at desktop widths (clones are display:none there,
-       so it's visually last again) while staying enabled on mobile (where
-       it flows straight into the cloned repeat). */
-    proofOriginalItems[proofOriginalItems.length - 1].classList.add("proof__last-real");
-    proofOriginalItems.forEach(function (li) {
-      var clone = li.cloneNode(true);
-      clone.setAttribute("aria-hidden", "true");
-      clone.setAttribute("data-clone", "");
-      proofList.appendChild(clone);
+  /* Considered confirmation moment ----------------------------------------
+     A checkmark that strokes itself, then the card settles in. */
+  var CHECK =
+    '<svg class="pd-check" viewBox="0 0 24 24" aria-hidden="true">' +
+    '<circle cx="12" cy="12" r="12"/>' +
+    '<path d="M6 12.5 10.5 17 18 8"/></svg>';
+
+  function celebrate(el) {
+    if (!el.querySelector(".pd-check")) el.insertAdjacentHTML("afterbegin", CHECK);
+    if (reduce) return;
+    el.classList.remove("is-celebrate");
+    void el.offsetWidth; /* restart the animation */
+    el.classList.add("is-celebrate");
+  }
+
+  /* Scroll entrance ----------------------------------------------------- */
+  if (!reduce && "IntersectionObserver" in window) {
+    document.documentElement.classList.add("has-reveal");
+
+    var blocks = [];
+    document.querySelectorAll("main > section").forEach(function (sec) {
+      var picks = sec.querySelectorAll(
+        ":scope > .container > *:not(.split), " +
+          ":scope > .container > .split > .split__media, " +
+          ":scope > .container > .split > .split__body"
+      );
+      (picks.length ? picks : [sec]).forEach(function (el) {
+        el.classList.add("reveal");
+        blocks.push(el);
+      });
+    });
+
+    var io = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (e) {
+          if (!e.isIntersecting) return;
+          var el = e.target;
+          var sibs = Array.prototype.filter.call(
+            el.parentElement.children,
+            function (c) {
+              return c.classList.contains("reveal");
+            }
+          );
+          el.style.transitionDelay = Math.min(sibs.indexOf(el), 3) * 60 + "ms";
+          el.classList.add("is-in");
+          io.unobserve(el);
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -6% 0px" }
+    );
+    blocks.forEach(function (el) {
+      io.observe(el);
     });
   }
 })();
